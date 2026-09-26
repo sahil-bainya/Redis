@@ -1,0 +1,22 @@
+services:
+  redis:
+    image: redis
+    container_name: chai-aur-redis
+    ports:
+      - "6379:6379"
+    command: ["redis-server","--appendonly","yes"]
+    volumes:
+      - redis-data:/data
+  mongo:
+    image: mongo
+    container_name: chai-aur-mongo
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_DATABASE: chai_aur_redis
+    volumes:
+      - mongo-data:/data/db
+
+volumes:
+  redis-data:
+  mongo-data:
