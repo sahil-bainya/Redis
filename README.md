@@ -16,7 +16,6 @@
 5. [Email Queue with Redis Lists](#05--email-queue-with-redis-lists)
 6. [Order Confirmation Jobs with BullMQ](#06--order-confirmation-jobs-with-bullmq)
 7. [Live Admin Notification — Pub/Sub](#07--live-admin-notification--pubsub)
-
 ---
 
 ## 01 · Setup
@@ -266,7 +265,7 @@ worker.js   →  consumer; processes jobs + listens to completed/failed events
 
 ---
 
-## 07 · Live Admin Notification (Pub/Sub)
+## 07 · Live Admin Notification — Pub/Sub
 
 Real-time notifications pushed to every connected admin.
 
